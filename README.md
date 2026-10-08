@@ -61,3 +61,31 @@ test/scene.test.js  headless build/compile/lighting smoke test
 ```bash
 node test/scene.test.js
 ```
+
+## 生成プロンプト (one-shot generation prompt)
+
+本项目由以下标准 one-shot prompt 一次性生成：
+
+> Build a polished, interactive voxel-style Japanese pagoda garden as a small web application in this empty folder.
+>
+> Create everything needed yourself using HTML, CSS, and JavaScript. Avoid external dependencies unless they are genuinely necessary.
+>
+> The scene should include a multi-tier Japanese pagoda, garden vegetation, cherry blossom trees, stone paths, lanterns, water, and subtle ambient animation. Give the entire scene a cohesive pixel/voxel aesthetic and aim for a visually impressive showcase piece rather than a basic demo.
+>
+> Make the application responsive and interactive. Include a day/night control, controllable environmental effects such as lamps and fireflies, and several small ambient animations or interactions.
+>
+> Pay particular attention to the rendering architecture. Base terrain and object colors must remain separate from lighting and environmental effects. Do not permanently bake lamp, firefly, or other illumination into the underlying block or tile colors.
+>
+> Implement lighting as a separate, reversible rendering contribution. A good rendering order is:
+>
+> 1. render the base terrain/object colors,
+> 2. apply dynamic illumination or lighting overlays,
+> 3. render emissive elements, particles, and other visual effects.
+>
+> When a light source such as a lamp or firefly effect is disabled, its illumination contribution must disappear completely and the affected areas must return to their correct unlit appearance. Light-source state, emissive visuals, particles, and illumination should remain consistent with one another.
+>
+> Work autonomously. Create the project files, inspect your own implementation, run useful validation or local commands, and fix problems you encounter.
+>
+> Use visual inspection if available. Critically evaluate composition, color balance, exposure, object scale, voxel consistency, readability, and interaction state. Test the important controls, especially day/night mode and lighting toggles, and verify that effects are genuinely reversible rather than visually baked into the scene.
+>
+> Leave the project in a clean, runnable state. Do not stop after explaining what you would do—implement, inspect, test, and refine the result yourself.
