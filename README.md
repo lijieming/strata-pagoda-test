@@ -1,8 +1,13 @@
 # 五重塔庭園 — Voxel Pagoda Garden
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-2D2A32?style=for-the-badge&logo=github&logoColor=white)](https://lijieming.github.io/strata-pagoda-test/)
+![Zero dependencies](https://img.shields.io/badge/zero%20dependencies-plain%20JS-4C6EF5?style=for-the-badge)
+
 An interactive voxel-style Japanese pagoda garden rendered with a custom
 isometric engine on Canvas 2D. **Zero dependencies** — plain HTML, CSS and
 JavaScript (ES2020).
+
+Live: <https://lijieming.github.io/strata-pagoda-test/>
 
 ## Run
 
