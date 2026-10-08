@@ -67,6 +67,19 @@ test/scene.test.js  headless build/compile/lighting smoke test
 node test/scene.test.js
 ```
 
+## 测试平台信息 (test platform)
+
+本次像素花园测试的运行平台：
+
+| Item | Value |
+| --- | --- |
+| Model | Qwen3.8 Flash Next |
+| Inference | Strata |
+| Coding harness | VS Code Local Agent |
+| Task | One-shot voxel garden + lighting invariants |
+| Hardware | R7515 + 2× RTX 4000 Ada |
+| Evaluation | visual quality, functionality, lighting reversibility, autonomous debugging |
+
 ## 生成プロンプト (one-shot generation prompt)
 
 本项目由以下标准 one-shot prompt 一次性生成：
