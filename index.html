@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>五重塔庭園 — Voxel Pagoda Garden</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="scene"></canvas>
+
+  <div id="titlecard" class="titlecard">
+    <div class="tc-inner">
+      <div class="tc-kanji">五重塔庭園</div>
+      <div class="tc-latin">Voxel Pagoda Garden</div>
+      <div class="tc-hint">drag to look around · click the world</div>
+    </div>
+  </div>
+
+  <div id="hoverchip" class="hoverchip" hidden></div>
+
+  <section id="panel" class="panel" aria-label="Scene controls">
+    <div class="panel-row">
+      <div class="group group-time">
+        <div class="group-label">時間 <span class="sub">Time of day</span></div>
+        <div class="time-row">
+          <span id="timeIcon" class="time-icon" aria-hidden="true">☀</span>
+          <input id="timeSlider" class="slider" type="range" min="0" max="1439" step="1" value="630"
+                 aria-label="Time of day">
+          <output id="timeLabel" class="mono">10:30</output>
+        </div>
+        <div class="btn-row">
+          <button class="chip" data-time="5.6">夜明け</button>
+          <button class="chip" data-time="12">正午</button>
+          <button class="chip" data-time="17.8">夕暮</button>
+          <button class="chip" data-time="22">夜</button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-label">季節 <span class="sub">Season</span></div>
+        <div class="btn-row">
+          <button class="chip season active" data-season="spring"><span>春</span><em>Spring</em></button>
+          <button class="chip season" data-season="summer"><span>夏</span><em>Summer</em></button>
+          <button class="chip season" data-season="autumn"><span>秋</span><em>Autumn</em></button>
+          <button class="chip season" data-season="winter"><span>冬</span><em>Winter</em></button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-label">視点 <span class="sub">View</span></div>
+        <div class="btn-row">
+          <button class="chip icon" id="rotL" title="Rotate left (A)">⟲</button>
+          <button class="chip icon" id="rotR" title="Rotate right (D)">⟳</button>
+          <button class="chip icon" id="zoomOut" title="Zoom out (−)">−</button>
+          <button class="chip icon" id="zoomIn" title="Zoom out (+)">+</button>
+          <button class="chip icon" id="reset" title="Reset view (R)">⌂</button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-label">演出 <span class="sub">Ambience</span></div>
+        <div class="btn-row">
+          <button class="chip toggle active" data-flag="petals">花吹雪</button>
+          <button class="chip toggle active" data-flag="fireflies">蛍</button>
+          <button class="chip toggle active" data-flag="glow">灯</button>
+          <button class="chip toggle" data-flag="sound">音</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel-foot">
+      <span class="dot"></span>
+      <span id="statusText">Click a lantern to light it · click the pond for a splash · click the pagoda to ring the bell</span>
+    </div>
+  </section>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/palette.js"></script>
+<script src="js/world.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
